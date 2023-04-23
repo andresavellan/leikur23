@@ -95,7 +95,7 @@ body > header nav {
   align-items: center;
 }
 body > header nav a {
-  padding-right: 2.5rem;
+  margin-right: 2.5rem;
   color: #fff;
   text-decoration: none;
   letter-spacing: 0.1rem;
@@ -181,7 +181,7 @@ section {
 }
 
 #one {
-  height: 877px;
+  height: 108rem;
   background-image: url(./images/web_top1.jpeg);
 }
 
@@ -191,8 +191,8 @@ section {
 }
 
 #one h2 {
-  margin-top: 215px;
-  max-width: 98rem;
+  margin-top: 21.5rem;
+  max-width: 100rem;
   text-align: center;
   line-height: 69px;
   text-shadow: 0px 4px 13px rgba(0, 0, 0, 0.6);
@@ -203,7 +203,7 @@ section {
 }
 
 #two {
-  height: 69rem;
+  height: 72rem;
   background-color: #fff;
   flex-direction: column;
 }
@@ -217,6 +217,7 @@ section {
 
 #two .three-elements {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   width: 100%;
   color: #000;
@@ -229,6 +230,8 @@ section {
   padding: 0 3rem 0 3rem;
   font-size: 19px;
   text-align: center;
+  max-width: 37rem;
+  margin: 0 2rem;
 }
 
 #two .three-elements img {
@@ -243,7 +246,7 @@ section {
 }
 
 #three {
-  height: 124rem;
+  height: 125rem;
   background-image: url(./images/web_accounts1.jpeg);
 }
 
@@ -307,6 +310,7 @@ section {
 }
 
 #five {
+  margin-top: 8rem;
   height: 158rem;
   background-image: url(./images/web_wallet1.jpeg);
 }
@@ -352,7 +356,7 @@ section {
 #five .leikur-wallet-img {
   flex-grow: 1;
   position: relative;
-  top: -15rem;
+  top: -23rem;
 }
 
 #six {
@@ -360,12 +364,12 @@ section {
   background-image: url(./images/web_about11.jpeg);
   flex-direction: column;
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 21rem;
 }
 
 #six .section-wrapper {
   position: relative;
-  top: -11rem;
+  top: -7rem;
 }
 #six h2 {
   font-size: 44px;
@@ -455,6 +459,7 @@ textarea {
   border: none;
   border-radius: 30px;
   padding: 0.9rem;
+  cursor: pointer;
 }
 
 footer {
