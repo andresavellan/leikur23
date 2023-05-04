@@ -5,9 +5,7 @@
   const navLinks = document.querySelectorAll('.nav-links-burger li')
 
   burgerWrapper.addEventListener('click', () => {
-    console.log('click')
     nav.classList.toggle('nav-active')
-
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = ''

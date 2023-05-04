@@ -91,8 +91,8 @@ h2 {
 }
 
 p {
-  line-height: 2;
   font-size: 1.9rem;
+  line-height: 3.3rem;
 }
 
 img {
@@ -199,6 +199,9 @@ section {
   max-width: 170rem;
   margin: 0 auto;
 }
+.section-wrapper {
+  z-index: 1;
+}
 
 #one {
   height: 100vh;
@@ -281,13 +284,11 @@ section {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 0.6rem;
-}
-#two .three-elements p {
-  line-height: 3.3rem;
+  max-width: 24rem;
 }
 
 #three {
-  min-height: 112rem;
+  min-height: 64vw;
   background-image: url(./images/accounts-mid.jpg);
   background-position-x: center;
   background-position-y: bottom;
@@ -295,7 +296,6 @@ section {
 }
 #three::before {
   content: '';
-  background-color: rgba(148, 140, 101, 0.93);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -303,6 +303,8 @@ section {
   right: 0;
   top: 0%;
   height: 100%;
+  background: rgb(148, 140, 101);
+  mix-blend-mode: multiply;
 }
 #three .top-svg {
   background-image: url(./images/mob-account-top.svg);
@@ -312,7 +314,7 @@ section {
   width: 101%;
   height: auto;
   left: -0.3rem;
-  top: -0.5rem;
+  top: -1.5rem;
   right: 0;
   bottom: 0;
 }
@@ -328,19 +330,19 @@ section {
   background-position: bottom;
 }
 
-#three .section-wrapper {
-  z-index: 1;
-}
 #three h2 {
   margin-left: 13rem;
   margin-top: 20rem;
   font-size: 3.9rem;
   line-height: 1.4;
-  margin-bottom: 11.2rem;
+  margin-bottom: 4vw;
+  max-width: 54rem;
 }
 #three .image-and-text {
   display: flex;
   padding: 0 7rem;
+  left: -8rem;
+  position: relative;
 }
 #three .image-and-text .laptop img {
   max-width: 72.7rem;
@@ -349,7 +351,7 @@ section {
 }
 
 #three .image-and-text .take-control {
-  padding-left: 6rem;
+  padding-left: 4vw;
   height: 38rem;
   display: flex;
   flex-direction: column;
@@ -358,6 +360,7 @@ section {
 
 #three .image-and-text .take-control p {
   max-width: 39rem;
+  margin-bottom: 3rem;
 }
 #three .image-and-text .take-control img {
   max-width: 19rem;
@@ -367,18 +370,15 @@ section {
   background-color: transparent;
   position: relative;
   top: -12rem;
-  padding: 0 7rem;
 }
 
 #four .section-wrapper {
   position: relative;
-  width: 60vw;
-  margin: 0;
 }
 
 #four ul {
   color: #000;
-  padding-left: 11rem;
+  margin-left: 15rem;
 }
 #four ul li {
   display: flex;
@@ -397,19 +397,54 @@ section {
 
 #five {
   margin-top: -6rem;
-  height: 158rem;
-  background-image: url(./images/web_wallet1.jpg);
+  height: 97rem;
+  background-image: url(./images/background-wallet.jpg);
   background-position: top;
-  padding: 0 10rem;
+  position: relative;
+}
+#five::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0%;
+  height: 100%;
+  background: rgba(76, 138, 179, 1);
+  mix-blend-mode: multiply;
 }
 
+#five .top-svg {
+  background-image: url(./images/shape-wallet.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 101%;
+  height: auto;
+  left: -0.3rem;
+  top: -0.5rem;
+  right: 0;
+  bottom: 0;
+}
+#five .bottom-svg {
+  background-image: url(./images/shape-wallet-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 101%;
+  height: 100%;
+  left: -0.2rem;
+  bottom: -0.4rem;
+  background-position: bottom;
+}
 #five .section-wrapper {
   display: flex;
 }
 
 #five .leikur-wallet-text {
-  margin-left: 21.5rem;
-  padding-top: 30rem;
+  margin-left: 27.5rem;
+  padding-top: 22rem;
 }
 
 #five .leikur-wallet-text h2 {
@@ -451,32 +486,95 @@ section {
   max-width: 37.6rem;
 }
 
-#six {
-  height: 62rem;
-  background-image: url(./images/web_about11.jpg);
+#five-six {
+  height: 43rem;
   flex-direction: column;
-  text-align: center;
-  margin-top: 10rem;
-  scroll-margin-top: 47rem;
+  justify-content: center;
+  position: relative;
+  padding: 0 7rem;
+}
+#five-six .top-svg {
+  background-image: url(./images/shape-about-us.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: -0.3rem;
+  top: -7.5rem;
+  right: 0;
+  bottom: 0;
+  max-width: 59rem;
 }
 
-#six .section-wrapper-top {
+#five-six .section-wrapper {
   max-width: 128rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: -31rem;
   color: #000;
+  text-align: center;
 }
-
-#six .open-account {
+#five-six .open-account {
   display: none;
 }
+#five-six .section-wrapper h2 {
+  font-size: 4.4rem;
+  margin-bottom: 3rem;
+}
 
+#six {
+  background-image: url(./images/background-enter-leikur.jpg);
+  background-position: center;
+  text-align: center;
+  scroll-margin-top: 47rem;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  height: 62rem;
+  padding: 0 7rem;
+}
+
+#six::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0%;
+  height: 100%;
+  background: rgba(214, 150, 48, 1);
+  mix-blend-mode: multiply;
+}
+
+#six .top-svg {
+  background-image: url(./images/shape-enter-leikur-top.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 101%;
+  height: auto;
+  left: -0.3rem;
+  top: -0.5rem;
+  right: 0;
+  bottom: 0;
+}
+
+#six .bottom-svg {
+  background-image: url(./images/shape-enter-leikur-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 101%;
+  height: 100%;
+  left: -0.2rem;
+  bottom: -0.4rem;
+  background-position: bottom;
+}
 #six .section-wrapper {
   position: relative;
-  top: -11rem;
 }
 #six h2 {
   font-size: 4.4rem;
@@ -614,8 +712,21 @@ footer .footer-bottom ul li a {
 footer .footer-mobile {
   display: none;
 }
+@media (min-width: 1364px) {
+  #three {
+    height: 118rem;
+    min-height: auto;
+  }
+  #three h2 {
+    margin-bottom: 11rem;
+    max-width: 54.7rem;
+  }
 
-@media (max-width: 1150px) {
+  #three .image-and-text .take-control {
+    padding-left: 6rem;
+  }
+}
+@media (max-width: 1364px) {
   body > header {
     height: 5.4rem;
   }
@@ -785,6 +896,18 @@ footer .footer-mobile {
   .toggle .line2 {
     transform: rotate(-45deg);
   }
+
+  #three {
+    min-height: 89vw;
+  }
+
+  #four ul li {
+    max-width: 55rem;
+  }
+  #six {
+    height: 620px;
+    background-position: center;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -796,28 +919,26 @@ footer .footer-mobile {
   }
 
   h2 {
-    font-size: 2.7rem;
+    font-size: 4vw;
   }
   p {
     line-height: 1.6;
   }
   #one {
-    height: 37.4rem;
+    height: 57rem;
     background-position: center 60%;
   }
   #one h2 {
-    margin-top: 11rem;
-    max-width: 36rem;
-    line-height: 1.4;
+    margin-top: 12rem;
+    max-width: 66vw;
   }
 
   #two {
-    padding-top: 4rem;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
   }
   #two h2 {
-    font-size: 2.7rem;
-    max-width: 30rem;
+    font-size: 4vw;
+    max-width: 44vw;
     margin: 0 auto;
     padding-bottom: 3rem;
   }
@@ -827,6 +948,13 @@ footer .footer-mobile {
     align-items: center;
   }
 
+  #two .three-elements img {
+    width: 14rem;
+  }
+
+  #two .three-elements h3 {
+    font-size: 1.6rem;
+  }
   #two .three-elements > div {
     margin-bottom: 4rem;
   }
@@ -842,33 +970,24 @@ footer .footer-mobile {
   }
 
   #three {
-    background-image: url(./images/mob-account.jpg);
     padding-bottom: 14rem;
-    background-position: bottom center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #948c65;
-  }
-  #three::before {
-    content: '';
-    background-image: url(./images/mob-account-top.svg);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    top: -3%;
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 
   #three .image-and-text {
     flex-direction: column;
+    left: auto;
   }
 
   #three h2 {
     text-align: center;
-    max-width: 53rem;
+    max-width: 48.7rem;
     margin: 15rem auto 8rem;
+    font-size: 4vw;
+  }
+
+  #three .laptop {
+    display: flex;
+    justify-content: center;
   }
 
   #three .image-and-text .laptop img {
@@ -878,13 +997,10 @@ footer .footer-mobile {
     position: relative;
     top: -10rem;
     padding: 0;
-    max-width: 73rem;
-    margin: 0 auto;
+    max-width: 53vw;
     width: 100%;
     height: 28rem;
-  }
-  #three .image-and-text .take-control > * {
-    margin-left: 13%;
+    margin: 0 auto;
   }
 
   #three .image-and-text .take-control img {
@@ -893,33 +1009,42 @@ footer .footer-mobile {
 
   #four {
     height: auto;
+    justify-content: center;
+    padding-bottom: 14rem;
+    top: -6rem;
   }
   #four ul {
-    padding-left: 0;
+    max-width: 53vw;
+    margin: 0 auto;
   }
 
-  #four ul li {
-    flex-direction: column;
-    text-align: center;
-    max-width: 30rem;
-    margin: 3rem auto;
-  }
   #four ul li img {
     margin: 0;
   }
+  #four ul li p {
+    font-size: 1.6rem;
+  }
 
   #five {
-    margin-top: 30rem;
+    height: auto;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   #five .section-wrapper {
     flex-direction: column-reverse;
     align-items: center;
-    top: -53rem;
+    top: -16rem;
     position: relative;
+    max-width: 53vw;
   }
   #five .leikur-wallet-img {
     flex-grow: 0;
     top: 0;
+  }
+  #five .leikur-wallet-img img {
+    height: 47rem;
   }
   #five .leikur-wallet-text {
     margin-left: 0;
@@ -927,49 +1052,83 @@ footer .footer-mobile {
     display: flex;
     flex-direction: column;
     text-align: center;
+  }
+  #five .leikur-wallet-text h2 {
+    font-size: 4vw;
+    max-width: 37rem;
+    margin: 0 auto 2rem;
+  }
+  #five .leikur-wallet-text p {
+    text-align: left;
+    font-size: 1.6rem;
+  }
+  #five .leikur-wallet-text ul {
+    margin-top: 6rem;
+  }
+  #five .leikur-wallet-text ul li {
+    max-width: 33rem;
+  }
+  #five .leikur-wallet-text ul li img {
+    width: 4rem;
+  }
+  #five .leikur-wallet-text ul li p {
+    font-weight: 700;
+  }
+  #five-six {
+    height: auto;
+    padding-top: 9rem;
+  }
+  #five-six .top-svg {
+    height: 27vw;
+    top: -5vw;
+  }
+  #five-six .section-wrapper {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    max-width: 53vw;
   }
 
-  #five .leikur-wallet-text p {
+  #five-six .section-wrapper p {
     text-align: left;
   }
 
-  #six {
-    margin-top: 40rem;
-  }
-  #six .section-wrapper {
-    position: relative;
-    top: -48rem;
-  }
-  #six .section-wrapper-top .open-account {
+  #five-six .open-account {
     display: block;
     max-width: 37rem;
     width: 100%;
     text-decoration: none;
-    margin: 3rem auto;
+    margin: 5rem 0;
     padding: 1.5rem;
     height: auto;
   }
-
-  #six .section-wrapper-top {
-    top: -60rem;
+  #six {
+    margin-top: 8rem;
   }
+  #six .section-wrapper {
+    position: relative;
+    max-width: 53vw;
+  }
+
   #six h2 {
     margin-top: 6rem;
+    font-size: 4vw;
   }
   #six p {
-    max-width: 45rem;
+    max-width: auto;
+    text-align: left;
+    margin: 0;
+  }
+
+  #seven .section-wrapper {
+    max-width: 53vw;
+  }
+  #seven p:last-of-type {
     text-align: left;
   }
 
-  #seven p:last-of-type {
-    margin-bottom: 5rem;
-    max-width: 37rem;
-    margin: 0 auto;
-  }
-
   #seven form {
-    max-width: 50rem;
+    max-width: 54vw;
   }
   #seven form .inputs {
     flex-direction: column;
@@ -1013,9 +1172,112 @@ footer .footer-mobile {
     text-decoration: none;
   }
 }
-@media (max-width: 670px) {
-  #three .image-and-text .take-control p {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+@media (max-width: 768px) {
+  .section-wrapper {
+    max-width: 33rem;
+  }
+
+  h2 {
+    font-size: 2.7rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  #one {
+    height: 43rem;
+  }
+  #one h2 {
+    margin-top: 11rem;
+  }
+
+  #two h2 {
+    font-size: 2.7rem;
+    max-width: 100%;
+  }
+  #two .section-wrapper {
+    max-width: 37rem;
+  }
+  #two .three-elements > div {
+    padding: 0;
+    max-width: 33rem;
+  }
+  #three h2 {
+    margin-bottom: 4rem;
+    max-width: 33rem;
+    font-size: 2.7rem;
+  }
+  #three .section-wrapper {
+    max-width: 40rem;
+  }
+  #three .image-and-text {
+    padding: 0;
+  }
+  #three .image-and-text .take-control {
+    max-width: 33rem;
+    top: -4rem;
+  }
+  #four {
+    top: 0rem;
+  }
+  #four ul {
+    max-width: 100%;
+  }
+  #four ul li {
+    flex-direction: column;
+  }
+
+  #four ul li p {
+    text-align: center;
+  }
+  #five .section-wrapper {
+    max-width: 33rem;
+  }
+
+  #five .leikur-wallet-text h2 {
+    max-width: 28rem;
+    font-size: 2.7rem;
+  }
+  #five .leikur-wallet-text p {
+    max-width: 33rem;
+  }
+  #five-six {
+    padding: 4rem 2rem 0;
+  }
+  #five-six .section-wrapper {
+    max-width: 37rem;
+  }
+
+  #five-six .section-wrapper h2 {
+    font-size: 2.7rem;
+  }
+  #five-six .section-wrapper p {
+    max-width: 33rem;
+  }
+  #six {
+    padding: 7rem 2rem;
+    margin-top: 5rem;
+    height: auto;
+  }
+  #six .section-wrapper {
+    max-width: 33rem;
+  }
+  #six .top-svg {
+    top: 0;
+  }
+
+  #six h2 {
+    font-size: 2.7rem;
+    margin-top: 0;
+  }
+  #seven .section-wrapper {
+    max-width: 33rem;
+  }
+  #seven h2 {
+    font-size: 2.7rem;
+  }
+  #seven form {
+    max-width: 100%;
   }
 }
