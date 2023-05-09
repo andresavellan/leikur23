@@ -1,4 +1,4 @@
-@import 'fonts/Lexend/index.css';
+@import "fonts/Lexend/index.css";
 
 :root {
   --blue: #235f8d;
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400; /* Regular */
   font-size: 1.6rem;
   color: #fff;
@@ -32,6 +32,14 @@ body {
   scroll-behavior: smooth;
   box-sizing: border-box;
   letter-spacing: 0px;
+}
+#popup-message {
+  background-color: var(--blue);
+  height: 400px;
+  width: 400px;
+}
+#popup-message p {
+  color: #fff;
 }
 
 .header-wrapper,
@@ -41,14 +49,6 @@ form {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-}
-
-a.anchor {
-  /* Compensation for top menu when clicking anchor links */
-  display: block;
-  position: relative;
-  top: -6rem;
-  visibility: hidden;
 }
 
 body > header {
@@ -79,13 +79,27 @@ body > header {
   width: 17.37rem;
 }
 
-h1 {
+.hidden-logo-text {
   text-indent: -9999px;
   position: absolute;
 }
 
-h2 {
+h1 {
   font-size: 5.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 21.5rem;
+  max-width: 100rem;
+  text-align: center;
+  -webkit-text-shadow: 0px 4px 13px rgba(0, 0, 0, 0.6);
+  -moz-text-shadow: 0px 4px 13px rgba(0, 0, 0, 0.6);
+  -ms-text-shadow: 0px 4px 13px rgba(0, 0, 0, 0.6);
+  -o-text-shadow: 0px 4px 13px rgba(0, 0, 0, 0.6);
+  text-shadow: 0px 4px 13px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+  font-size: 4.4rem;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -105,7 +119,6 @@ strong {
 }
 
 body > header nav {
-  flex: none;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -157,9 +170,16 @@ body > header nav a:hover {
   background-color: var(--blue);
   margin-right: 1.4rem;
 }
-
+.header-buttons a:first-child:hover {
+  background-color: rgb(35 95 141 / 70%);
+  transition: all 0.3s;
+}
 .header-buttons a:last-child {
   background-color: var(--green);
+}
+.header-buttons a:last-child:hover {
+  background-color: rgb(124 163 125 / 70%);
+  transition: all 0.3s;
 }
 
 /*Mobile nav*/
@@ -211,6 +231,7 @@ section {
   position: relative;
   z-index: 0;
 }
+
 #one .bottom-svg {
   background-image: url(./images/shape-top.svg);
   background-repeat: no-repeat;
@@ -228,17 +249,6 @@ section {
   justify-content: center;
 }
 
-#one h2 {
-  margin-top: 21.5rem;
-  max-width: 100rem;
-  text-align: center;
-  text-shadow: 0px 4px 13px rgba(0, 0, 0, 0.6);
-  -webkit-text-shadow: 0px 4px 13px rgba(0, 0, 0, 0.6);
-  -moz-text-shadow: 0px 4px 13px rgba(0, 0, 0, 0.6);
-  -ms-text-shadow: 0px 4px 13px rgba(0, 0, 0, 0.6);
-  -o-text-shadow: 0px 4px 13px rgba(0, 0, 0, 0.6);
-}
-
 #two {
   background-color: #fff;
   flex-direction: column;
@@ -247,7 +257,6 @@ section {
 }
 
 #two h2 {
-  font-size: 4.4rem;
   color: #000;
   text-align: center;
   padding-bottom: 7rem;
@@ -295,7 +304,7 @@ section {
   position: relative;
 }
 #three::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -338,6 +347,7 @@ section {
   margin-bottom: 4vw;
   max-width: 54rem;
 }
+
 #three .image-and-text {
   display: flex;
   padding: 0 7rem;
@@ -396,14 +406,14 @@ section {
 }
 
 #five {
-  margin-top: -6rem;
+  margin-top: 11rem;
   height: 97rem;
   background-image: url(./images/background-wallet.jpg);
   background-position: top;
   position: relative;
 }
 #five::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -487,7 +497,7 @@ section {
 }
 
 #five-six {
-  height: 43rem;
+  height: 60rem;
   flex-direction: column;
   justify-content: center;
   position: relative;
@@ -537,7 +547,7 @@ section {
 }
 
 #six::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -601,9 +611,11 @@ section {
   margin-bottom: 2rem;
   color: #000;
 }
+
 #seven h2 {
-  font-size: 4.4rem;
+  font-size: 3.9rem;
 }
+
 #seven p:last-of-type {
   margin-bottom: 5rem;
 }
@@ -631,7 +643,7 @@ section {
 textarea {
   color: #686262;
   font-size: 1.4rem;
-  font-family: 'Lexend', sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   background-color: #f2f2f2;
 }
@@ -660,6 +672,10 @@ textarea {
   border-radius: 3rem;
   padding: 0.9rem;
   cursor: pointer;
+}
+#seven form .textarea-and-button button:hover {
+  background-color: rgb(99 67 85 / 90%);
+  transition: 0.3s ease-out;
 }
 
 footer {
@@ -726,9 +742,48 @@ footer .footer-mobile {
     padding-left: 6rem;
   }
 }
+
 @media (max-width: 1364px) {
+  /*header menu*/
+  .header-wrapper {
+    padding: 0 6vw;
+  }
+  .brand {
+    margin-right: 9vw;
+  }
+  .brand img {
+    width: 13.5vw;
+  }
+  body > header nav a {
+    font-size: 1.45vw;
+    margin-right: 3vw;
+  }
+  /*end header menu*/
+
+  #three {
+    min-height: 89vw;
+  }
+
+  #four ul li {
+    max-width: 55rem;
+  }
+  #six {
+    height: 620px;
+    background-position: center;
+  }
+
+  .footer-bottom .footer-column-one p {
+    max-width: 27rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  /*start header menu*/
   body > header {
     height: 5.4rem;
+  }
+  body > header nav a {
+    font-size: 1.6rem;
   }
   .header-wrapper {
     padding: 0 1.4rem 0 2.9rem;
@@ -872,7 +927,7 @@ footer .footer-mobile {
   }
 
   .burger.toggle:before {
-    content: '';
+    content: "";
     display: block;
     padding-top: 100%;
   }
@@ -897,47 +952,38 @@ footer .footer-mobile {
     transform: rotate(-45deg);
   }
 
-  #three {
-    min-height: 89vw;
-  }
+  /*End header menu*/
 
-  #four ul li {
-    max-width: 55rem;
-  }
-  #six {
-    height: 620px;
-    background-position: center;
-  }
-}
-
-@media (max-width: 1024px) {
   body > header nav a {
     padding: 0.3rem;
   }
   main#home > section#about > header {
     padding: 4rem 2rem 1rem 2rem;
   }
+  h1 {
+    font-size: 4.4rem;
+    margin-top: 12rem;
+    max-width: 66vw;
+  }
 
   h2 {
     font-size: 4vw;
+    line-height: 1.3;
   }
+
   p {
     line-height: 1.6;
   }
   #one {
     height: 57rem;
     background-position: center 60%;
-  }
-  #one h2 {
-    margin-top: 12rem;
-    max-width: 66vw;
+    background-image: url(./images/background-one-1024.jpg);
   }
 
   #two {
     padding-bottom: 2rem;
   }
   #two h2 {
-    font-size: 4vw;
     max-width: 44vw;
     margin: 0 auto;
     padding-bottom: 3rem;
@@ -971,6 +1017,7 @@ footer .footer-mobile {
 
   #three {
     padding-bottom: 14rem;
+    background-image: url(./images/background-account-1024.jpg);
   }
 
   #three .image-and-text {
@@ -982,7 +1029,6 @@ footer .footer-mobile {
     text-align: center;
     max-width: 48.7rem;
     margin: 15rem auto 8rem;
-    font-size: 4vw;
   }
 
   #three .laptop {
@@ -1054,7 +1100,6 @@ footer .footer-mobile {
     text-align: center;
   }
   #five .leikur-wallet-text h2 {
-    font-size: 4vw;
     max-width: 37rem;
     margin: 0 auto 2rem;
   }
@@ -1077,6 +1122,7 @@ footer .footer-mobile {
   #five-six {
     height: auto;
     padding-top: 9rem;
+    margin-bottom: 5rem;
   }
   #five-six .top-svg {
     height: 27vw;
@@ -1103,7 +1149,8 @@ footer .footer-mobile {
     height: auto;
   }
   #six {
-    margin-top: 8rem;
+    padding-bottom: 6rem;
+    height: auto;
   }
   #six .section-wrapper {
     position: relative;
@@ -1112,7 +1159,6 @@ footer .footer-mobile {
 
   #six h2 {
     margin-top: 6rem;
-    font-size: 4vw;
   }
   #six p {
     max-width: auto;
@@ -1122,6 +1168,9 @@ footer .footer-mobile {
 
   #seven .section-wrapper {
     max-width: 53vw;
+  }
+  #seven h2 {
+    font-size: 4vw;
   }
   #seven p:last-of-type {
     text-align: left;
@@ -1177,6 +1226,11 @@ footer .footer-mobile {
     max-width: 33rem;
   }
 
+  h1 {
+    font-size: 2.7rem;
+    margin-top: 10rem;
+    max-width: 66vw;
+  }
   h2 {
     font-size: 2.7rem;
   }
@@ -1231,6 +1285,11 @@ footer .footer-mobile {
   #four ul li p {
     text-align: center;
   }
+
+  #five {
+    background-position: 70%;
+  }
+
   #five .section-wrapper {
     max-width: 33rem;
   }

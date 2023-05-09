@@ -1,3 +1,22 @@
+<?php
+session_start();
+$_SESSION['csrf_token'] = md5(uniqid(mt_rand(), true));
+if (isset($_SESSION['message'])) {
+    $message = $_SESSION['message'];
+    unset($_SESSION['message']);
+
+    echo '<div id="popup-message" style="position: fixed;z-index: 9999999;height: 100vh;width: 100vw;top: 0;left: 0;right: 0;bottom: 0;background: rgb(0 0 0 / 70%);display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    <p style="background-color: #4C8AB3;padding: 70px;color: #fff;border-radius: 20px;max-width: 370px;max-height: 300px;text-align: center;">' .
+        $message .
+        '</p></div>';
+    echo '<script>
+          setTimeout(function() {
+            var popup = document.getElementById("popup-message");
+            popup.style.display = "none";
+          }, 5000);
+        </script>';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,14 +32,14 @@
     <title>Leikur - Banking service</title>
 
     <link rel="stylesheet" href="./style.css" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
     <header>
       <div class="header-wrapper">
         <a class="brand" href="/">
           <img src="./images/leikur-logo.svg" alt="Leikur Logo" />
-          <h1>Leikur A banking service</h1>
+          <p class="hidden-logo-text">Leikur A banking service</p>
         </a>
         <nav class="nav-container">
           <div class="nav-links-desktop">
@@ -82,11 +101,11 @@
     <main>
       <section id="one">
         <div class="section-wrapper">
-          <h2>
+          <h1>
             A banking service for global internet and game-tech industries.
             <br />
             Finally.
-          </h2>
+          </h1>
         </div>
         <div class="bottom-svg"></div>
       </section>
@@ -263,21 +282,23 @@
           <p>
             Send us a message and one of our team members will be in touch soon.
           </p>
-          <form>
+          <form id="contact-form" method="POST" action="contact.php">
             <div class="inputs">
               <input
                 type="text"
-                name="first-name"
-                id="first-name"
+                name="firstname"
+                id="firstname"
                 placeholder="First name:"
                 required
+                pattern="[a-zA-Z ]+"
               />
               <input
                 type="text"
-                name="last-name"
-                id="last-name"
+                name="lastname"
+                id="lastname"
                 placeholder="Last name:"
                 required
+                pattern="[a-zA-Z ]+"
               />
               <input
                 type="text"
@@ -285,6 +306,7 @@
                 id="company"
                 placeholder="Company:"
                 required
+                pattern="[a-zA-Z ]+"
               />
               <input
                 type="email"
@@ -296,8 +318,8 @@
             </div>
             <div class="textarea-and-button">
               <textarea
-                id="message"
                 name="message"
+                id="message"
                 rows="5"
                 cols="33"
                 placeholder="Message:"
@@ -305,6 +327,11 @@
               ></textarea>
               <button type="submit">Send</button>
             </div>
+            <input
+              type="hidden"
+              name="csrf_token"
+              value="<?php echo $_SESSION['csrf_token']; ?>"
+            />
           </form>
         </div>
       </section>
@@ -331,16 +358,16 @@
         <div class="footer-column-two">
           <ul>
             <li>
-              <a href="#accounts">Accounts</a>
+              <a href="#three">Accounts</a>
             </li>
             <li>
-              <a href="#wallets">Wallets</a>
+              <a href="#five">Wallets</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#six">About</a>
             </li>
             <li>
-              <a href="#connectwithus">Contact</a>
+              <a href="#seven">Contact</a>
             </li>
           </ul>
         </div>
@@ -353,8 +380,14 @@
         </div>
         <div>
           <ul>
-            <li>LinkedIn</li>
-            <li>Twitter</li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/leikurfinance/about/"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -365,16 +398,16 @@
             <p>Leikur</p>
           </li>
           <li>
-            <a href="#accounts">Accounts</a>
+            <a href="#three">Accounts</a>
           </li>
           <li>
-            <a href="#wallets">Wallets</a>
+            <a href="#five">Wallets</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#six">About</a>
           </li>
           <li>
-            <a href="#connectwithus">Contact</a>
+            <a href="#seven">Contact</a>
           </li>
         </ul>
         <ul>
@@ -389,8 +422,14 @@
           <li>
             <p>Follow</p>
           </li>
-          <li>LinkedIn</li>
-          <li>Twitter</li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/leikurfinance/about/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+          </li>
         </ul>
         <div>
           <p><small>© Copyright Leikur Ltd. 2023</small></p>
