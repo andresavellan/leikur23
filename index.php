@@ -25,9 +25,7 @@ if (isset($_SESSION['message'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
-      content="Leikur A banking service for global 
-		internet and game-tech industries. 
-		Finally."
+      content="Leikur A banking service for global internet and game-tech industries. Finally."
     />
     <title>Leikur - Banking service</title>
 
