@@ -342,13 +342,10 @@ if (isset($_SESSION['message'])) {
       </div>
       <div class="footer-bottom">
         <div class="footer-column-one">
-          <p><small>© Copyright Leikur Ltd. 2023</small></p>
-          <p>
-            <small>
-              <strong>Leikur UAB</strong>
-              , Gedimino pr. 20, Vilnius, Lithuania
-            </small>
-          </p>
+           <p><small>© Copyright Leikur Ltd. 2023</small></p>
+          <p><small><strong>Leikur UAB</strong></small></p>
+          <p><small>Gedimino pr. 20</small></p>
+          <p><small>Vilnius, Lithuania</small></p>
         </div>
         <div class="footer-column-two">
           <ul>
