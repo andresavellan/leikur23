@@ -23,11 +23,8 @@ if (isset($_SESSION['message'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Leikur A banking service for global internet and game-tech industries. Finally."
-    />
-    <title>Leikur - Banking service</title>
+    <meta name="description" content="" />
+    <title>Starter</title>
 
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -100,7 +97,8 @@ if (isset($_SESSION['message'])) {
       <section id="one">
         <div class="section-wrapper">
           <h1>
-            A banking service for global internet and game-tech industries.
+            A corporate banking service for global internet and game-tech
+            industries.
             <br />
             Finally.
           </h1>
@@ -116,9 +114,7 @@ if (isset($_SESSION['message'])) {
                 src="./images/for-an-industry-on-the-move-symbol.svg"
                 alt=""
               />
-              <h3>
-                For an industry on the move
-              </h3>
+              <h3>For an industry on the move</h3>
               <p>
                 Addressing a global online industry increasingly in need of
                 innovative, customised banking solutions.
@@ -161,7 +157,7 @@ if (isset($_SESSION['message'])) {
         <div class="top-svg"></div>
         <div class="section-wrapper">
           <h2>
-            Leikur Account International transactions, without hidden fees
+            Leikur Accounts - International transactions, without hidden fees
           </h2>
           <div class="image-and-text">
             <div class="laptop">
@@ -169,10 +165,11 @@ if (isset($_SESSION['message'])) {
             </div>
             <div class="take-control">
               <p>
-                Take control of your finances and administration with a Leikur
-                business account. Tailor-made features, an intuitive interface
-                and smart solution that helps your business grow. Manage SEPA
-                and/or SWIFT transactions, for all your cross-border payments.
+                Take control of your company's finances and administration with
+                a Leikur business account. Tailor-made features, an intuitive
+                interface and smart solution that helps your business grow.
+                Manage SEPA and/or SWIFT transactions, for all your cross-border
+                payments.
               </p>
               <img src="./images/sepa-swift-logo.svg" alt="Lap top computer" />
             </div>
@@ -200,8 +197,8 @@ if (isset($_SESSION['message'])) {
             <li>
               <img src="./images/list-icon-4.svg" alt="" />
               <p>
-                The best exchange rates possible for cross-border ransactions,
-                with up to 20+ currencies available
+                The best exchange rates possible for cross-border transactions,
+                with 20+ currencies available
               </p>
             </li>
           </ul>
@@ -211,11 +208,11 @@ if (isset($_SESSION['message'])) {
         <div class="top-svg"></div>
         <div class="section-wrapper">
           <div class="leikur-wallet-text">
-            <h2>Leikur Wallets Your most valued financial tool</h2>
+            <h2>Leikur Wallets - Your most valued financial tool</h2>
             <p>
               A wallet that gives its users the freedom and flexibility they
               need for all their purchases, contactless in-store payments and
-              cash withdrawals - and full control over spending
+              cash withdrawals - and full control over spending.
             </p>
             <ul>
               <li>
@@ -250,8 +247,8 @@ if (isset($_SESSION['message'])) {
             With traditional banks constantly changing and tightening their
             requirements, and with harmonised international and national
             regulations impacting online gaming operators, we sought to provide
-            a banking service that adresses the specific, essential ambitions
-            and needs of the innovative gaming industry.
+            a corporate banking service that adresses the specific, essential
+            ambitions and needs of the innovative gaming industry.
           </p>
         </div>
       </section>
@@ -268,7 +265,7 @@ if (isset($_SESSION['message'])) {
           <p>
             The Leikur team combines state-of-the art technology, banking,
             strategy & marketing experience and knowledge. Together we provide a
-            banking service tailor-made for your purposes.
+            corporate banking service tailor-made for your purposes.
           </p>
           <h2>Finally.</h2>
         </div>
@@ -431,12 +428,9 @@ if (isset($_SESSION['message'])) {
         </ul>
         <div>
           <p><small>© Copyright Leikur Ltd. 2023</small></p>
-          <p>
-            <small>
-              <strong>Leikur UAB</strong>
-              , Gedimino pr. 20, Vilnius, Lithuania
-            </small>
-          </p>
+          <p><small><strong>Leikur UAB</strong></small></p>
+          <p><small>Gedimino pr. 20</small></p>
+          <p><small>Vilnius, Lithuania</small></p>
         </div>
       </div>
     </footer>
